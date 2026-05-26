@@ -1,0 +1,55 @@
+---
+const navLinks = [
+  { label: 'Services', href: '#services' },
+  { label: 'Why Us', href: '#why-us' },
+  { label: 'Testimonials', href: '#testimonials' },
+  { label: 'Contact', href: '#contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-navy-800 shadow-md">
+  <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo / Name -->
+    <a href="/" class="flex items-center gap-2 group">
+      <span class="text-2xl">⚓</span>
+      <div class="leading-tight">
+        <span class="block text-white font-bold text-lg tracking-tight group-hover:text-gold-400 transition-colors">
+          Hull of a Deal
+        </span>
+        <span class="block text-blue-300 text-xs font-medium tracking-widest uppercase">
+          Marine Services
+        </span>
+      </div>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex items-center gap-8">
+      {navLinks.map(link => (
+        <li>
+          <a
+            href={link.href}
+            class="text-blue-100 hover:text-gold-400 font-medium text-sm tracking-wide transition-colors"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- CTA -->
+    <a
+      href="tel:+15555550100"
+      class="hidden md:inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-navy-800 font-bold text-sm px-4 py-2 rounded-lg transition-colors"
+    >
+      📞 (555) 555-0100
+    </a>
+
+    <!-- Mobile menu button (hamburger — no JS for now, just shows phone) -->
+    <a
+      href="tel:+15555550100"
+      class="md:hidden text-gold-400 font-bold text-sm"
+    >
+      📞 Call Us
+    </a>
+  </nav>
+</header>

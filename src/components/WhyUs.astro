@@ -1,0 +1,41 @@
+---
+const reasons = [
+  {
+    icon: '🏆',
+    title: 'Over 15 Years on the Water',
+    body: "We're boaters ourselves. We know what it takes to keep a vessel running right because we've lived it.",
+  },
+  {
+    icon: '💬',
+    title: 'Straight Talk, Fair Prices',
+    body: "No upsells, no surprise invoices. You get an honest quote upfront and we stick to it.",
+  },
+  {
+    icon: '📍',
+    title: 'Local & Responsive',
+    body: "We're your neighbors. Call or text and you'll hear back same day — no hold music, no ticket systems.",
+  },
+];
+---
+
+<section id="why-us" class="py-24 bg-navy-800 text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold-400 font-semibold tracking-widest uppercase text-sm mb-3">Why Choose Us</p>
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">The Hull of a Deal Difference</h2>
+      <p class="text-blue-200 text-lg max-w-xl mx-auto">
+        We treat your boat like it's our own — because we know how much it means to you.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {reasons.map(reason => (
+        <div class="text-center">
+          <div class="text-5xl mb-5">{reason.icon}</div>
+          <h3 class="text-xl font-bold text-gold-400 mb-3">{reason.title}</h3>
+          <p class="text-blue-200 leading-relaxed">{reason.body}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

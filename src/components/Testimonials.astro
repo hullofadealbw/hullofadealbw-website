@@ -1,0 +1,54 @@
+---
+const testimonials = [
+  {
+    name: 'Mike R.',
+    location: 'Lake Marina',
+    stars: 5,
+    text: "Brought my 22-foot bowrider in with a nasty crack along the port side. These guys had it looking better than new in under a week. Price was exactly what they quoted. Won't go anywhere else.",
+  },
+  {
+    name: 'Sandra T.',
+    location: 'Harborview Slip',
+    stars: 5,
+    text: "Hull of a Deal did a full gelcoat restoration on our sailboat. The oxidation was bad — really bad. Now she's gleaming. Honest, communicative, and the work speaks for itself.",
+  },
+  {
+    name: 'Dave & Carol P.',
+    location: 'Bayshore Yacht Club',
+    stars: 5,
+    text: "Engine was running rough all spring and two other shops couldn't figure it out. One call to these guys and it was diagnosed and fixed the same week. Highly recommend.",
+  },
+];
+
+const stars = (count: number) => '★'.repeat(count) + '☆'.repeat(5 - count);
+---
+
+<section id="testimonials" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <p class="text-gold-500 font-semibold tracking-widest uppercase text-sm mb-3">Happy Customers</p>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-navy-700 mb-4">What Our Customers Say</h2>
+      <a
+        href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center gap-2 text-gold-500 hover:text-gold-600 font-semibold transition-colors"
+      >
+        ⭐ See all our reviews on Google →
+      </a>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {testimonials.map(t => (
+        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col gap-4">
+          <p class="text-gold-500 text-xl tracking-wide">{stars(t.stars)}</p>
+          <p class="text-gray-600 leading-relaxed flex-1">"{t.text}"</p>
+          <div>
+            <p class="font-bold text-navy-700">{t.name}</p>
+            <p class="text-sm text-gray-400">{t.location}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
