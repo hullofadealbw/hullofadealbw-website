@@ -4,23 +4,33 @@ export default {
   theme: {
     extend: {
       colors: {
-        navy: {
-          50:  '#f0f5ff',
-          100: '#dbeafe',
-          500: '#1e3a5f',
-          600: '#162d4a',
-          700: '#0f2035',
-          800: '#0a1728',
-          900: '#060e18',
-        },
-        gold: {
-          400: '#f6c343',
-          500: '#e5a800',
-          600: '#c48f00',
+        brand: {
+          ink: 'var(--brand-ink)',
+          'ink-raised': 'var(--brand-ink-raised)',
+          'ink-deep': 'var(--brand-ink-deep)',
+          cream: 'var(--brand-cream)',
+          'cream-soft': 'var(--brand-cream-soft)',
+          paper: 'var(--brand-paper)',
+          powder: 'var(--brand-powder)',
+          'powder-soft': 'var(--brand-powder-soft)',
+          slate: 'var(--brand-slate)',
+          'slate-strong': 'var(--brand-slate-strong)',
+          teal: 'var(--brand-teal)',
+          'teal-strong': 'var(--brand-teal-strong)',
+          'teal-ink': 'var(--brand-teal-ink)',
+          border: 'var(--brand-border)',
         },
       },
+      borderRadius: {
+        brand: 'var(--radius)',
+      },
+      boxShadow: {
+        'brand-sm': 'var(--shadow-sm)',
+        'brand-md': 'var(--shadow-md)',
+      },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
+        sans: ['var(--font-body)'],
+        display: ['var(--font-display)'],
       },
     },
   },

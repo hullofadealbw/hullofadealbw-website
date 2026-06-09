@@ -23,16 +23,16 @@ const testimonials = [
 const stars = (count: number) => '★'.repeat(count) + '☆'.repeat(5 - count);
 ---
 
-<section id="testimonials" class="py-24 bg-white">
+<section id="testimonials" class="py-24 bg-brand-paper">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
-      <p class="text-gold-500 font-semibold tracking-widest uppercase text-sm mb-3">Happy Customers</p>
-      <h2 class="text-4xl md:text-5xl font-extrabold text-navy-700 mb-4">What Our Customers Say</h2>
+      <p class="text-brand-teal-ink font-semibold tracking-widest uppercase text-sm mb-3">Happy Customers</p>
+      <h2 class="font-display text-4xl md:text-5xl text-brand-ink mb-4">What Our Customers Say</h2>
       <a
         href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-2 text-gold-500 hover:text-gold-600 font-semibold transition-colors"
+        class="inline-flex items-center gap-2 text-brand-teal-ink hover:text-brand-teal-strong font-semibold transition-colors"
       >
         ⭐ See all our reviews on Google →
       </a>
@@ -40,12 +40,12 @@ const stars = (count: number) => '★'.repeat(count) + '☆'.repeat(5 - count);
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {testimonials.map(t => (
-        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100 flex flex-col gap-4">
-          <p class="text-gold-500 text-xl tracking-wide">{stars(t.stars)}</p>
-          <p class="text-gray-600 leading-relaxed flex-1">"{t.text}"</p>
+        <div class="bg-brand-cream-soft rounded-brand p-8 border border-brand-border flex flex-col gap-4">
+          <p class="text-brand-teal text-xl tracking-wide">{stars(t.stars)}</p>
+          <p class="text-brand-slate-strong leading-relaxed flex-1">"{t.text}"</p>
           <div>
-            <p class="font-bold text-navy-700">{t.name}</p>
-            <p class="text-sm text-gray-400">{t.location}</p>
+            <p class="font-bold text-brand-ink">{t.name}</p>
+            <p class="text-sm text-brand-slate">{t.location}</p>
           </div>
         </div>
       ))}

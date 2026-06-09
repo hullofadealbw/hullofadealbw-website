@@ -39,24 +39,24 @@ const services = [
 ];
 ---
 
-<section id="services" class="py-24 bg-gray-50">
+<section id="services" class="py-24 bg-brand-cream-soft">
   <div class="max-w-6xl mx-auto px-6">
     <div class="text-center mb-16">
-      <p class="text-gold-500 font-semibold tracking-widest uppercase text-sm mb-3">What We Do</p>
-      <h2 class="text-4xl md:text-5xl font-extrabold text-navy-700 mb-4">Our Services</h2>
-      <p class="text-gray-500 text-lg max-w-xl mx-auto">
+      <p class="text-brand-teal-ink font-semibold tracking-widest uppercase text-sm mb-3">What We Do</p>
+      <h2 class="font-display text-4xl md:text-5xl text-brand-ink mb-4">Our Services</h2>
+      <p class="text-brand-slate-strong text-lg max-w-xl mx-auto">
         From quick fixes to full restorations, we handle it all with the care your boat deserves.
       </p>
     </div>
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {services.map(service => (
-        <div class="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md border border-gray-100 transition-shadow group">
+        <div class="bg-brand-paper rounded-brand p-8 shadow-brand-sm hover:shadow-brand-md border border-brand-border transition-shadow group">
           <div class="text-4xl mb-4">{service.icon}</div>
-          <h3 class="text-xl font-bold text-navy-700 mb-3 group-hover:text-gold-500 transition-colors">
+          <h3 class="text-xl font-bold text-brand-ink mb-3 group-hover:text-brand-teal-strong transition-colors">
             {service.title}
           </h3>
-          <p class="text-gray-500 leading-relaxed">{service.description}</p>
+          <p class="text-brand-slate-strong leading-relaxed">{service.description}</p>
         </div>
       ))}
     </div>

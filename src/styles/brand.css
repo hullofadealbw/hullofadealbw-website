@@ -1,0 +1,41 @@
+/* ============================================================
+   Hull of a Deal Boat Works — Brand Tokens
+   Edit the --brand-* values below to retheme the site.
+   Tailwind picks these up via tailwind.config.mjs.
+   ============================================================ */
+
+:root {
+  /* ---- Brand palette ---- */
+  --brand-ink:          #1A2B3B;
+  --brand-ink-raised:   #22384C;
+  --brand-ink-deep:     #12202D;
+
+  --brand-cream:        #E8E3DC;
+  --brand-cream-soft:   #F2EEE7;
+  --brand-paper:        #FBF9F5;
+
+  --brand-powder:       #C1D1E1;
+  --brand-powder-soft:  #D8E2EC;
+
+  --brand-slate:        #6A798F;
+  --brand-slate-strong: #4F5E73;
+
+  --brand-teal:         #2A9D8F;
+  --brand-teal-strong:  #1F8275;
+  --brand-teal-ink:     #15564E;
+
+  --brand-border:       rgba(26, 43, 59, 0.14);
+
+  /* ---- Typography ---- */
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Oswald', sans-serif;
+
+  /* ---- Layout ---- */
+  --radius:    10px;
+  --shadow-sm: 0 1px 2px rgba(26, 43, 59, 0.08);
+  --shadow-md: 0 6px 24px rgba(26, 43, 59, 0.12);
+}
+
+.font-display {
+  font-weight: 600;
+}

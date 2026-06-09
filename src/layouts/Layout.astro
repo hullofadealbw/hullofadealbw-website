@@ -1,13 +1,18 @@
 ---
+import '../styles/brand.css';
+import { publicAsset } from '../utils/publicAsset';
+
 interface Props {
   title?: string;
   description?: string;
 }
 
 const {
-  title = 'Hull of a Deal | Boat Repair & Marine Services',
+  title = 'Hull of a Deal | Boat Works',
   description = 'Expert boat repair and marine services. Fiberglass, hull painting, engine work, and more. Honest prices, quality results.',
 } = Astro.props;
+
+const faviconUrl = publicAsset('favicon.png');
 ---
 
 <!doctype html>
@@ -20,12 +25,12 @@ const {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" href={faviconUrl} />
   </head>
-  <body class="bg-white text-gray-800 font-sans antialiased">
+  <body class="bg-brand-cream text-brand-ink font-sans antialiased">
     <slot />
   </body>
 </html>

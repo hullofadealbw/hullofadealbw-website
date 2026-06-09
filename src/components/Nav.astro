@@ -1,23 +1,33 @@
 ---
+import { publicAsset } from '../utils/publicAsset';
+
 const navLinks = [
   { label: 'Services', href: '#services' },
   { label: 'Why Us', href: '#why-us' },
   { label: 'Testimonials', href: '#testimonials' },
   { label: 'Contact', href: '#contact' },
 ];
+
+const logoUrl = publicAsset('logo.svg');
 ---
 
-<header class="fixed top-0 left-0 right-0 z-50 bg-navy-800 shadow-md">
+<header class="fixed top-0 left-0 right-0 z-50 bg-brand-ink-deep shadow-brand-md">
   <nav class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
     <!-- Logo / Name -->
-    <a href="/" class="flex items-center gap-2 group">
-      <span class="text-2xl">⚓</span>
+    <a href={import.meta.env.BASE_URL} class="flex items-center gap-3 group">
+      <img
+        src={logoUrl}
+        alt="Hull of a Deal"
+        width="40"
+        height="40"
+        class="h-10 w-10 shrink-0"
+      />
       <div class="leading-tight">
-        <span class="block text-white font-bold text-lg tracking-tight group-hover:text-gold-400 transition-colors">
+        <span class="block text-brand-cream font-bold text-lg tracking-tight group-hover:text-brand-teal transition-colors">
           Hull of a Deal
         </span>
-        <span class="block text-blue-300 text-xs font-medium tracking-widest uppercase">
-          Marine Services
+        <span class="block text-brand-powder text-xs font-medium tracking-widest uppercase">
+          Boat Works
         </span>
       </div>
     </a>
@@ -28,7 +38,7 @@ const navLinks = [
         <li>
           <a
             href={link.href}
-            class="text-blue-100 hover:text-gold-400 font-medium text-sm tracking-wide transition-colors"
+            class="text-brand-powder-soft hover:text-brand-teal font-medium text-sm tracking-wide transition-colors"
           >
             {link.label}
           </a>
@@ -39,7 +49,7 @@ const navLinks = [
     <!-- CTA -->
     <a
       href="tel:+15555550100"
-      class="hidden md:inline-flex items-center gap-2 bg-gold-500 hover:bg-gold-600 text-navy-800 font-bold text-sm px-4 py-2 rounded-lg transition-colors"
+      class="hidden md:inline-flex items-center gap-2 bg-brand-teal hover:bg-brand-teal-strong text-brand-ink font-bold text-sm px-4 py-2 rounded-brand transition-colors"
     >
       📞 (555) 555-0100
     </a>
@@ -47,7 +57,7 @@ const navLinks = [
     <!-- Mobile menu button (hamburger — no JS for now, just shows phone) -->
     <a
       href="tel:+15555550100"
-      class="md:hidden text-gold-400 font-bold text-sm"
+      class="md:hidden text-brand-teal font-bold text-sm"
     >
       📞 Call Us
     </a>
