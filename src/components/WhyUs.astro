@@ -16,16 +16,27 @@ const reasons = [
     body: "We're your neighbors. Call or text and you'll hear back same day — no hold music, no ticket systems.",
   },
 ];
+
+const story = [
+  "I didn't start this company from a business plan — I started it from frustration.",
+  'As a longtime boat owner, I know firsthand how it feels to hand over your hard-earned money to someone who never shows up, does shoddy work, or takes advantage of the fact that you just want your boat running right. It happened to me more times than I care to admit. And every time, I told myself: there has to be a better way.',
+  'So I made it my mission to find it. Over the years, I sought out the best technicians, the most reliable craftsmen, and the hardest-working people in the marine industry — the ones who actually take pride in what they do. I built relationships. I tested people. And slowly, I put together a team I would trust with my own boat.',
+  'That team is the foundation of this company.',
+  "We're here because boat owners deserve better. Better service, better communication, and better value — without getting gouged for it. We refuse to operate any other way. Every customer is a fellow boating enthusiast to us, and we'll always go above and beyond to make sure your time on the water stays exactly what it should be: a joy.",
+  "Quality work at fair prices. That's not just our promise — it's the whole reason we exist.",
+];
 ---
 
 <section id="why-us" class="py-24 bg-brand-ink-deep text-brand-cream">
   <div class="max-w-6xl mx-auto px-6">
-    <div class="text-center mb-16">
-      <p class="text-brand-teal font-semibold tracking-widest uppercase text-sm mb-3">Why Choose Us</p>
+    <div class="text-center mb-32">
+      <p class="text-brand-teal font-bold tracking-widest uppercase mb-3 text-xl">Why Choose Us</p>
       <h2 class="font-display text-4xl md:text-5xl mb-4">The Hull of a Deal Difference</h2>
-      <p class="text-brand-powder text-lg max-w-xl mx-auto">
-        We treat your boat like it's our own — because we know how much it means to you.
-      </p>
+      <div class="text-brand-powder text-lg max-w-3xl mx-auto text-center space-y-4">
+        {story.map((paragraph) => (
+          <span class="block leading-relaxed">{paragraph}</span>
+        ))}
+      </div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
